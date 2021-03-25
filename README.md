@@ -1,1 +1,1 @@
-# aw_loss
+Adaptive Weighted Discriminator for Training Generative Adversarial Networks
