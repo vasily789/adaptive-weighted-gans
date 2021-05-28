@@ -1,6 +1,6 @@
 # Adaptive Weighted Discriminator for Training Generative Adversarial Networks
 
-
++ Requered packages: PyTorch, NumPy
 
 
 If you use this code or our results in your research, please cite as appropriate:
