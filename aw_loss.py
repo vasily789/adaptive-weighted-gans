@@ -36,6 +36,9 @@ class aw_method():
 		# calculating the norm of the fake gradient
 		fdotf = torch.dot(grad_fake_list, grad_fake_list).item() + 1e-4 # 1e-4 added to avoid division by zero
 		f_norm = np.sqrt(fdotf)
+		
+		# resetting gradient back to zero
+		Dis_opt.zero_grad()
 
 		# dot product between real and fake gradients
 		rdotf = torch.dot(grad_real_list,grad_fake_list).item()
