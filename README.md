@@ -1,7 +1,11 @@
-Adaptive Weighted Discriminator for Training Generative Adversarial Networks
+# Adaptive Weighted Discriminator for Training Generative Adversarial Networks
+
+
 
 
 If you use this code or our results in your research, please cite as appropriate:
+
+```
 @misc{zadorozhnyy2020adaptive,
       title={Adaptive Weighted Discriminator for Training Generative Adversarial Networks}, 
       author={Vasily Zadorozhnyy and Qiang Cheng and Qiang Ye},
@@ -10,3 +14,5 @@ If you use this code or our results in your research, please cite as appropriate
       archivePrefix={arXiv},
       primaryClass={cs.LG}
 }
+```
+Soon to appear in 2021 Conference on Computer Vision and Pattern Recognition (CVPR'21)
