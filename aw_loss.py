@@ -105,4 +105,3 @@ class aw_method():
 			param.grad = w_r * grad_real_tensor[index] + w_f * grad_fake_tensor[index]
 	
 		return aw_loss
-        
