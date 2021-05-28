@@ -1,6 +1,5 @@
 import numpy as np
 import torch
-import torch.nn as nn
 
 class aw_method():
 	def __init__(self, alpha1=0.5, alpha2=0.75, delta=0.05, epsilon=0.05, normalized_aw=True):
