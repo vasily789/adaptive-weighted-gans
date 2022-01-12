@@ -18,7 +18,7 @@ class aw_method():
 		# computing real batch gradient 
 		Dloss_real.backward(retain_graph=True)
 		# tensor with real gradients
-		grad_real_tensor = [param.grad for _, param in Dis_Net.named_parameters()]
+		grad_real_tensor = [param.grad.clone() for _, param in Dis_Net.named_parameters()]
 		grad_real_list = torch.cat([grad.reshape(-1) for grad in grad_real_tensor], dim=0)
 		# calculating the norm of the real gradient
 		rdotr = torch.dot(grad_real_list, grad_real_list).item() + 1e-4 # 1e-4 added to avoid division by zero
@@ -30,7 +30,7 @@ class aw_method():
 		# computing fake batch gradient 
 		Dloss_fake.backward()#(retain_graph=True)
 		# tensor with real gradients
-		grad_fake_tensor = [param.grad for _, param in Dis_Net.named_parameters()]
+		grad_fake_tensor = [param.grad.clone() for _, param in Dis_Net.named_parameters()]
 		grad_fake_list = torch.cat([grad.reshape(-1) for grad in grad_fake_tensor], dim=0)
 		# calculating the norm of the fake gradient
 		fdotf = torch.dot(grad_fake_list, grad_fake_list).item() + 1e-4 # 1e-4 added to avoid division by zero
